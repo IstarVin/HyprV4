@@ -51,8 +51,8 @@ install_stage=(
     thunar 
     btop
     firefox
-    thunderbird
-    mpv
+    # thunderbird
+    vlc # mpv
     pamixer 
     pavucontrol 
     brightnessctl 
@@ -61,6 +61,8 @@ install_stage=(
     blueman 
     network-manager-applet 
     gvfs 
+    gvfs-mtp #
+    gvfs-smb #
     thunar-archive-plugin 
     file-roller
     starship 
@@ -277,15 +279,15 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 
     #set the measuring unit
     echo -e "$CNT - Attempring to set mesuring unit..."
-    if locale -a | grep -q ^en_US; then
-        echo -e "$COK - Setting mesuring system to imperial..."
-        ln -sf ~/.config/HyprV/waybar/conf/mesu-imp.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
-        sed -i 's/SET_MESU=""/SET_MESU="I"/' ~/.config/HyprV/hyprv.conf
-    else
-        echo -e "$COK - Setting mesuring system to metric..."
-        sed -i 's/SET_MESU=""/SET_MESU="M"/' ~/.config/HyprV/hyprv.conf
-        ln -sf ~/.config/HyprV/waybar/conf/mesu-met.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
-    fi
+    # if locale -a | grep -q ^en_US; then
+    #     echo -e "$COK - Setting mesuring system to imperial..."
+    #     ln -sf ~/.config/HyprV/waybar/conf/mesu-imp.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
+    #     sed -i 's/SET_MESU=""/SET_MESU="I"/' ~/.config/HyprV/hyprv.conf
+    # else
+    # fi
+    echo -e "$COK - Setting mesuring system to metric..."
+    sed -i 's/SET_MESU=""/SET_MESU="M"/' ~/.config/HyprV/hyprv.conf
+    ln -sf ~/.config/HyprV/waybar/conf/mesu-met.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
 
     # Setup each appliaction
     # check for existing config folders and backup 
