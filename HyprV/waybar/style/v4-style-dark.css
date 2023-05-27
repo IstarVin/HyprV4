@@ -63,6 +63,7 @@ tooltip label{
 #battery,
 #pulseaudio,
 #network,
+#bluetooth,
 #tray,
 #temperature,
 #workspaces,
@@ -70,7 +71,7 @@ tooltip label{
 #backlight {
     background: rgba(21, 18, 27, 0);
     opacity: 1;
-    padding: 0px 8px;
+    padding: 0px 5px;
     margin: 0px 3px;
     border: 0px;
 }
@@ -105,4 +106,12 @@ tooltip label{
 #custom-launch_firefox, 
 #custom-launch_kitty {
     font-size: 20px;
+}
+
+#taskbar button {
+    border-radius: 4px;
+}
+
+#taskbar button.active {
+    background: rgba(18, 16, 24, 0.5);
 }
