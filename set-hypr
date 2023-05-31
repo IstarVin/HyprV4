@@ -65,7 +65,7 @@ install_stage=(
     gvfs-smb #
     thunar-archive-plugin 
     file-roller
-    starship 
+    # starship 
     papirus-icon-theme 
     ttf-jetbrains-mono-nerd 
     noto-fonts-emoji 
@@ -348,15 +348,15 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 fi
 
 ### Install the starship shell ###
-read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the starship shell? (y,n) ' STAR
-if [[ $STAR == "Y" || $STAR == "y" ]]; then
-    # install the starship shell
-    echo -e "$CNT - Hansen Crusher, Engage!"
-    echo -e "$CNT - Updating .bashrc..."
-    echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
-    echo -e "$CNT - copying starship config file to ~/.config ..."
-    cp Extras/starship.toml ~/.config/
-fi
+# read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the starship shell? (y,n) ' STAR
+# if [[ $STAR == "Y" || $STAR == "y" ]]; then
+#     # install the starship shell
+#     echo -e "$CNT - Hansen Crusher, Engage!"
+#     echo -e "$CNT - Updating .bashrc..."
+#     echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
+#     echo -e "$CNT - copying starship config file to ~/.config ..."
+#     cp Extras/starship.toml ~/.config/
+# fi
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
